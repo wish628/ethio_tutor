@@ -1,0 +1,9 @@
+.env
+**/build/
+.idea/
+.vscode/
+*.iml
+android/key.properties
+*.jks
+.keystore
+android/*.keystore

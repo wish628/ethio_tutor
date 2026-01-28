@@ -1,0 +1,44 @@
+name: Build APK with Secrets
+
+on:
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: 'stable'
+        channel: 'stable'
+
+    - name: Create .env file from secrets
+      run: |
+        echo "ADDIS_AI_API_KEY=${{ secrets.ADDIS_AI_API_KEY }}" > .env
+        echo "BASE_URL=${{ secrets.BASE_URL || 'https://api.addisassistant.com/api/v1' }}" >> .env
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Build APK (release)
+      run: flutter build apk --release
+
+    - name: Upload APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ethio-tutor-apk
+        path: build/app/outputs/flutter-apk/app-release.apk
+        retention-days: 30
+
+    - name: Build info
+      run: |
+        echo "✅ APK built successfully!"
+        echo "📦 Download from the Actions artifacts"
+        ls -lh build/app/outputs/flutter-apk/

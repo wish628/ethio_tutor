@@ -1,0 +1,27 @@
+name: ethio_tutor
+description: A mobile app for learning Amharic and Afaan Oromo with AI
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0           # For API calls
+  record: ^5.1.0         # To record user voice
+  just_audio: ^0.9.36    # To play AI voice
+  path_provider: ^2.1.1  # To save audio files
+  permission_handler: ^11.0.1
+  flutter_dotenv: ^5.1.0 # To manage environment variables
+  google_fonts: ^6.1.0   # For better Ge'ez script rendering
+  shared_preferences: ^2.2.2 # For storing user settings
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true

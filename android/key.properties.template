@@ -1,0 +1,6 @@
+# Copy this file to android/key.properties and fill in real values.
+# Do NOT commit your real key.properties to version control.
+storePassword=REPLACE_ME
+keyPassword=REPLACE_ME
+keyAlias=REPLACE_ME
+storeFile=REPLACE_ME   # e.g., C:\Users\you\my-release-key.jks
