@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^1.1.0           # For API calls
-  record: ^5.1.0         # To record user voice
+  record: ^5.2.0         # Updated to fix platform implementation issues
   just_audio: ^0.9.36    # To play AI voice
   path_provider: ^2.1.1  # To save audio files
   permission_handler: ^11.0.1

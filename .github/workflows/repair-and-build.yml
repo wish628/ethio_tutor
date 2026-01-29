@@ -22,6 +22,7 @@ jobs:
       run: |
         # Regenerate missing android files while keeping customization
         flutter create . --platforms android
+        flutter pub upgrade
         
     - name: Sync ENV
       run: |
