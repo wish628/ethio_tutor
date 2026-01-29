@@ -1,0 +1,47 @@
+name: Repair & Build APK
+
+on:
+  workflow_dispatch:  # Manual trigger via Actions tab
+
+jobs:
+  repair-and-build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: 'stable'
+
+    - name: Repair Project Structure
+      run: |
+        # Regenerate missing android files while keeping customization
+        flutter create . --platforms android
+        
+    - name: Sync ENV
+      run: |
+        echo "ADDIS_AI_API_KEY=${{ secrets.ADDIS_AI_API_KEY }}" > .env
+        echo "BASE_URL=${{ secrets.BASE_URL || 'https://api.addisassistant.com/api/v1' }}" >> .env
+
+    - name: Build APK (Release)
+      run: flutter build apk --release
+
+    - name: Upload APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ethio-tutor-fixed-apk
+        path: build/app/outputs/flutter-apk/app-release.apk
+
+    - name: Commit Repairs (Back to repo)
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        # Only commit the android folder changes
+        git add android/
+        git commit -m "chore: Restore missing Android build files" || echo "No changes to commit"
+        git push || echo "Push failed (maybe already up to date)"
