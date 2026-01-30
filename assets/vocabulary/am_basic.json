@@ -1,0 +1,43 @@
+[
+  {
+    "id": "am_hello",
+    "word": "ሰላም",
+    "translation": "Hello",
+    "pronunciation": "Selam",
+    "languageCode": "am",
+    "category": "greetings",
+    "exampleSentence": "ሰላም ነው?"
+  },
+  {
+    "id": "am_thank_you",
+    "word": "አመሰግናለሁ",
+    "translation": "Thank you",
+    "pronunciation": "Ameseginalehu",
+    "languageCode": "am",
+    "category": "greetings"
+  },
+  {
+    "id": "am_good_morning",
+    "word": "እንደምን አደሩ",
+    "translation": "Good morning",
+    "pronunciation": "Endemin aderu",
+    "languageCode": "am",
+    "category": "greetings"
+  },
+  {
+    "id": "am_coffee",
+    "word": "ቡና",
+    "translation": "Coffee",
+    "pronunciation": "Buna",
+    "languageCode": "am",
+    "category": "food"
+  },
+  {
+    "id": "am_water",
+    "word": "ውሃ",
+    "translation": "Water",
+    "pronunciation": "Wuha",
+    "languageCode": "am",
+    "category": "food"
+  }
+]

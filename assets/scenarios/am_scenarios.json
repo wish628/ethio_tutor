@@ -1,0 +1,28 @@
+[
+    {
+        "id": "am_market_haggle",
+        "title": "Market Haggling",
+        "description": "Negotiating price for coffee",
+        "languageCode": "am",
+        "category": "shopping",
+        "difficulty": "intermediate",
+        "steps": [
+            {
+                "stepNumber": 1,
+                "speaker": "ai",
+                "text": "ይህ ቡና ስንት ነው?",
+                "translation": "How much is this coffee?"
+            },
+            {
+                "stepNumber": 2,
+                "speaker": "user",
+                "text": "አንድ መቶ ብር ነው",
+                "translation": "It is one hundred birr",
+                "acceptableResponses": [
+                    "አንድ መቶ ብር",
+                    "መቶ ብር"
+                ]
+            }
+        ]
+    }
+]

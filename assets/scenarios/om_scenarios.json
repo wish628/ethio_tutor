@@ -1,0 +1,27 @@
+[
+    {
+        "id": "om_greeting_elder",
+        "title": "Greeting an Elder",
+        "description": "Respectfully greeting an elder person",
+        "languageCode": "om",
+        "category": "greetings",
+        "difficulty": "beginner",
+        "steps": [
+            {
+                "stepNumber": 1,
+                "speaker": "user",
+                "text": "Akkam jirtu?",
+                "translation": "How are you (respectful)?",
+                "acceptableResponses": [
+                    "Akkam jirtu"
+                ]
+            },
+            {
+                "stepNumber": 2,
+                "speaker": "ai",
+                "text": "Galatoomi, fayya dha. Ati akkam?",
+                "translation": "Thank you, I am fine. How are you?"
+            }
+        ]
+    }
+]

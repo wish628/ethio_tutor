@@ -1,0 +1,35 @@
+[
+  {
+    "id": "om_hello",
+    "word": "Akkam",
+    "translation": "Hello",
+    "pronunciation": "Akkam",
+    "languageCode": "om",
+    "category": "greetings",
+    "exampleSentence": "Akkam jirtu?"
+  },
+  {
+    "id": "om_thank_you",
+    "word": "Galatoomi",
+    "translation": "Thank you",
+    "pronunciation": "Galatoomi",
+    "languageCode": "om",
+    "category": "greetings"
+  },
+  {
+    "id": "om_water",
+    "word": "Bishaan",
+    "translation": "Water",
+    "pronunciation": "Bishaan",
+    "languageCode": "om",
+    "category": "food"
+  },
+  {
+    "id": "om_coffee",
+    "word": "Buna",
+    "translation": "Coffee",
+    "pronunciation": "Buna",
+    "languageCode": "om",
+    "category": "food"
+  }
+]

@@ -17,6 +17,12 @@ dependencies:
   flutter_dotenv: ^5.1.0 # To manage environment variables
   google_fonts: ^6.1.0   # For better Ge'ez script rendering
   shared_preferences: ^2.2.2 # For storing user settings
+  fl_chart: ^0.66.0      # For progress charts and graphs
+  confetti: ^0.7.0       # Celebration animations
+  shimmer: ^3.0.0        # Shimmer effects for loading states
+  intl: ^0.19.0          # Date formatting for streaks
+  flutter_svg: ^2.0.9    # SVG support for badges
+  animations: ^2.0.11    # Enhanced page transitions
 
 dev_dependencies:
   flutter_test:
@@ -25,3 +31,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env
+    - assets/achievements/
+    - assets/vocabulary/
+    - assets/scenarios/
