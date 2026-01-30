@@ -18,7 +18,6 @@ pluginManagement {
 
     includeBuild("${settings.ext.flutterSdkPath}/packages/flutter_tools/gradle")
 
-
     repositories {
         google()
         mavenCentral()
@@ -28,7 +27,10 @@ pluginManagement {
 
 plugins {
     id "dev.flutter.flutter-gradle-plugin" apply false
+    id "com.android.application" version "8.2.1" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.22" apply false
 }
 
-include ':app'
+include ":app"
+
 
