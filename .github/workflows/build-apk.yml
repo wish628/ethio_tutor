@@ -23,6 +23,10 @@ jobs:
         echo "ADDIS_AI_API_KEY=${{ secrets.ADDIS_AI_API_KEY }}" > .env
         echo "BASE_URL=${{ secrets.BASE_URL || 'https://api.addisassistant.com/api/v1' }}" >> .env
 
+    - name: Create local.properties
+      run: |
+        echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
+
     - name: Clean build environment
       run: |
         flutter clean
