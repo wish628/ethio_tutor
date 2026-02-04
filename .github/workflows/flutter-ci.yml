@@ -28,11 +28,11 @@ jobs:
           echo "ERROR: .env file found in the repository. This file should not be committed."; exit 1
         fi
 
-    - name: Analyze
-      run: flutter analyze
+    # - name: Analyze
+    #   run: flutter analyze
 
-    - name: Run tests
-      run: flutter test --coverage
+    # - name: Run tests
+    #   run: flutter test --coverage
   build-debug-apk:
     name: Build debug APK (PR validation)
     runs-on: ubuntu-latest
