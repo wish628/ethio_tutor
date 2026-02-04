@@ -36,29 +36,10 @@ class EthioTutorApp extends StatefulWidget {
 }
 
 class _EthioTutorAppState extends State<EthioTutorApp> {
-  final AudioRecorder recorder = AudioRecorder();
   final ValueNotifier<ThemeMode> _themeNotifier = ValueNotifier(ThemeMode.system);
 
   @override
   void initState() {
-    super.initState();
-    _loadTheme();
-  }
-
-  // ... (keeping _loadTheme) ...
-
-  // Inside a method where recording starts (Wait, the snippet I saw earlier had recording logic in ChatScreen but main.dart in step 1320 seems different? Ah, the snippet in 1320 shows the class _EthioTutorAppState but NOT the ChatScreen where the recorder was. Let me re-read 1320 completely.
-  
-  // WAIT. Step 1320 shows `lib/main.dart` contents. It has `_EthioTutorAppState` but NO `Record` variable in it!
-  // The `Record` variable was in `_ChatScreenState` in `lib/main.dart` in previous checks.
-  // Step 1320 shows lines 1-70. It ends at line 70. The file is truncated? No, "Total Lines: 70".
-  // The file `lib/main.dart` in 1320 DOES NOT HAVE the recorder logic anymore?
-  // It imports `screens/home_screen.dart`.
-  // Maybe the recorder logic moved to `home_screen.dart` or `ai_service.dart`?
-  
-  // Let me check `lib/screens/home_screen.dart` before I try to fix `main.dart`.
-  // If `main.dart` is clean, I don't need to fix it.
-
     super.initState();
     _loadTheme();
   }
